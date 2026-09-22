@@ -128,16 +128,16 @@ Steps:
             - POST-MUP-1 
             
   # (f) - This is our proxy for making sure that post rate has returned to 60s - it has 90 seconds to be hit after POST-MUP-1
-    POST-MUP-2:
-      event:
-        type: POST-request-received
+  POST-MUP-2:
+    event:
+      type: POST-request-received
+      parameters:
+        endpoint: /mup/*
+    actions:
+      - type: remove-steps
         parameters:
-          endpoint: /mup/*
-      actions:
-        - type: remove-steps
-          parameters:
-            steps:
-              - POST-MUP-2
+          steps:
+            - POST-MUP-1 
               
   # (f)
   WAIT-TILL-END:
