@@ -137,7 +137,7 @@ Steps:
       - type: remove-steps
         parameters:
           steps:
-            - POST-MUP-1 
+            - POST-MUP-2 
               
   # (f)
   WAIT-TILL-END:
